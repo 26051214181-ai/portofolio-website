@@ -1,0 +1,1198 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiara Ayuningtyas | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --orange: #D46743;
+  --blue: #73A5CA;
+  --cream: #F9F6F0;
+  --dark: #302F2D;
+  --gray: #776F69;
+  --line: #E8E0D7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+section {
+  scroll-margin-top: 85px;
+}
+
+.section {
+  padding: 90px 0;
+}
+
+.label {
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font: 800 clamp(30px, 4vw, 45px)/1.25 "Manrope", sans-serif;
+  letter-spacing: -1px;
+  margin-bottom: 18px;
+}
+
+.description {
+  color: var(--gray);
+  max-width: 650px;
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(249,246,240,.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font: 800 14px "Manrope", sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 17px;
+  background: var(--orange);
+  color: white;
+  font-size: 28px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  color: var(--orange);
+}
+
+.nav-contact {
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  padding: 11px 22px;
+  border-radius: 30px;
+}
+
+.menu-toggle {
+  display: none;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 7px 12px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 690px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  align-items: center;
+  gap: 35px;
+  padding: 55px 0;
+}
+
+.hero h1 {
+  font: 800 clamp(48px, 6.2vw, 82px)/1.12 "Manrope", sans-serif;
+  letter-spacing: -3px;
+  margin-bottom: 24px;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--orange);
+}
+
+.hero-subtitle {
+  font: 800 clamp(22px, 2.8vw, 35px)/1.5 "Manrope", sans-serif;
+  color: var(--blue);
+  margin-bottom: 22px;
+}
+
+.hero-description {
+  color: var(--gray);
+  font-size: 16px;
+  line-height: 1.95;
+  margin-bottom: 30px;
+  max-width: 620px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: .25s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.primary {
+  background: var(--orange);
+  color: white;
+  border: 1px solid var(--orange);
+}
+
+.secondary {
+  color: #507FA0;
+  border: 1px solid var(--blue);
+}
+
+/* FOTO PROFIL */
+
+.hero-visual {
+  position: relative;
+  width: 100%;
+  max-width: 470px;
+  min-height: 530px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-circle {
+  position: absolute;
+  width: 92%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #DCEBF3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-card {
+  position: relative;
+  z-index: 1;
+  width: 78%;
+  padding: 20px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  box-shadow: 0 25px 65px #47382C12;
+  transform: rotate(-3deg);
+  transition: .3s;
+}
+
+.profile-card:hover {
+  transform: rotate(0) translateY(-5px);
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  color: var(--gray);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* BAGIAN INI MENAMPILKAN FOTO KAMU */
+
+.profile-photo {
+  width: 100%;
+  height: 290px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #E7EDF4;
+}
+
+.profile-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 20px;
+}
+
+.caption {
+  display: block;
+  color: #8D8178;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: .8px;
+}
+
+.card-foot h3 {
+  margin-top: 5px;
+  font: 700 16px "Manrope", sans-serif;
+}
+
+.star {
+  color: var(--orange);
+  font-size: 27px;
+}
+
+.tag {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 17px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  box-shadow: 0 12px 35px #47382C0C;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tag-top {
+  top: 17%;
+  right: -1%;
+}
+
+.tag-top span {
+  color: var(--orange);
+}
+
+.tag-bottom {
+  bottom: 14%;
+  left: -2%;
+}
+
+.tag-bottom span {
+  color: var(--blue);
+}
+
+/* TENTANG SAYA */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.about-number {
+  font: 800 100px/1 "Manrope", sans-serif;
+  color: #EBDCD0;
+}
+
+.about-text {
+  color: var(--gray);
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.identity-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+  margin-top: 28px;
+}
+
+.identity-item {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.identity-item small {
+  display: block;
+  color: var(--gray);
+  font-size: 12px;
+}
+
+.identity-item strong {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+/* KEAHLIAN */
+
+.skills-section,
+.contact-section {
+  background: #F1EEE7;
+}
+
+.skills-header {
+  margin-bottom: 38px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skill-card {
+  padding: 28px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  transition: .25s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px #47382C0B;
+}
+
+.skill-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  background: #F9E5DB;
+}
+
+.skill-card:nth-child(2) .skill-icon {
+  background: #E2EDF5;
+}
+
+.skill-card:nth-child(3) .skill-icon {
+  background: #F5EFD9;
+}
+
+.skill-card h3 {
+  font: 700 19px "Manrope", sans-serif;
+  margin-bottom: 9px;
+}
+
+.skill-card p {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.skill-tag {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  background: #F8F0E9;
+  color: #A45336;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* PENGALAMAN ORGANISASI */
+
+.experience-list {
+  margin-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 145px 1fr auto;
+  gap: 25px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.period {
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.experience-item h3 {
+  font: 700 19px/1.5 "Manrope", sans-serif;
+  margin-bottom: 5px;
+}
+
+.role {
+  color: #507FA0;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.experience-item p {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.arrow {
+  color: var(--orange);
+  font-size: 24px;
+}
+
+/* KONTAK */
+
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr .9fr;
+  gap: 40px;
+  align-items: center;
+  padding: 42px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+}
+
+.contact-heading {
+  font: 800 clamp(30px, 4vw, 44px)/1.3 "Manrope", sans-serif;
+  margin-bottom: 18px;
+}
+
+.contact-heading span {
+  color: var(--orange);
+}
+
+.contact-intro {
+  color: var(--gray);
+}
+
+.contact-list {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px;
+  background: var(--cream);
+  border-radius: 14px;
+  overflow-wrap: anywhere;
+}
+
+.contact-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  background: white;
+  color: var(--orange);
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.contact-item small {
+  display: block;
+  color: var(--gray);
+  font-size: 11px;
+}
+
+.contact-item strong {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 24px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.footer p {
+  color: var(--gray);
+  font-size: 12px;
+}
+
+.footer strong {
+  color: var(--orange);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .nav-links {
+    gap: 17px;
+  }
+
+  .hero-grid {
+    gap: 18px;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 6vw, 62px);
+  }
+
+  .hero-visual {
+    min-height: 460px;
+  }
+
+  .profile-photo {
+    height: 250px;
+  }
+
+  .about-grid {
+    gap: 35px;
+  }
+
+  .experience-item {
+    grid-template-columns: 115px 1fr auto;
+    gap: 18px;
+  }
+
+  .contact-box {
+    padding: 30px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 650px) {
+  .section {
+    padding: 70px 0;
+  }
+
+  .nav-inner {
+    min-height: 70px;
+  }
+
+  .brand {
+    gap: 9px;
+    font-size: 10px;
+    letter-spacing: .5px;
+  }
+
+  .brand-icon {
+    width: 43px;
+    height: 43px;
+    font-size: 23px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 5% 20px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px 0;
+  }
+
+  .nav-contact {
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 48px 0 40px;
+  }
+
+  .hero h1 {
+    font-size: clamp(45px, 11vw, 66px);
+    letter-spacing: -2px;
+    margin-bottom: 18px;
+  }
+
+  .hero-subtitle {
+    font-size: 23px;
+    margin-bottom: 16px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .button {
+    padding: 12px 17px;
+    font-size: 12px;
+  }
+
+  .hero-visual {
+    max-width: 420px;
+    min-height: 430px;
+    margin-top: 10px;
+  }
+
+  .profile-card {
+    width: 72%;
+    padding: 16px;
+    border-radius: 23px;
+  }
+
+  .profile-photo {
+    height: 265px;
+    border-radius: 16px;
+  }
+
+  .card-head {
+    font-size: 8px;
+    margin-bottom: 12px;
+  }
+
+  .card-foot h3 {
+    font-size: 14px;
+  }
+
+  .caption {
+    font-size: 7px;
+  }
+
+  .tag {
+    padding: 11px 12px;
+    font-size: 10px;
+  }
+
+  .tag-top {
+    top: 14%;
+    right: 0;
+  }
+
+  .tag-bottom {
+    bottom: 11%;
+    left: 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .about-number {
+    font-size: 65px;
+  }
+
+  .identity-list {
+    gap: 10px;
+  }
+
+  .identity-item {
+    padding: 12px;
+  }
+
+  .identity-item strong {
+    font-size: 11px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .skill-card {
+    padding: 23px;
+  }
+
+  .experience-item {
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    padding: 23px 0;
+  }
+
+  .period {
+    grid-column: 1 / -1;
+  }
+
+  .experience-item h3 {
+    font-size: 17px;
+  }
+
+  .arrow {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .contact-box {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .contact-item {
+    padding: 11px;
+  }
+
+  .contact-item strong {
+    font-size: 11px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-visual {
+    min-height: 390px;
+  }
+
+  .profile-photo {
+    height: 235px;
+  }
+
+  .tag {
+    padding: 9px;
+    font-size: 9px;
+  }
+
+  .identity-list {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="#beranda" class="brand">
+      <span class="brand-icon">K</span>
+      <span>KIARA AYUNINGTYAS.</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Buka menu" aria-expanded="false">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#tentang">Tentang</a>
+      <a href="#keahlian">Keahlian</a>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#kontak" class="nav-contact">Kontak ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HALAMAN PEMBUKA -->
+<section class="hero" id="beranda">
+  <div class="container hero-grid">
+
+    <div>
+      <h1>Halo, aku<br>Kiara <span>Ayuningtyas.</span></h1>
+
+      <h2 class="hero-subtitle">
+        Kreativitas, komunikasi,<br>
+        dan pengalaman organisasi.
+      </h2>
+
+      <p class="hero-description">
+        Mahasiswa Sistem Informasi yang memiliki pengalaman di bidang
+        kesekretariatan organisasi dalam mengelola administrasi, kearsipan,
+        dan alur komunikasi internal. Aku juga tertarik pada desain visual
+        dan video editing.
+      </p>
+
+      <div class="buttons">
+        <a href="#pengalaman" class="button primary">
+          Lihat Pengalaman ↘
+        </a>
+        <a href="#kontak" class="button secondary">
+          Hubungi Saya ↗
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-circle"></div>
+
+      <div class="profile-card">
+        <div class="card-head">
+          <span>PERSONAL PORTFOLIO</span>
+          <span>2026</span>
+        </div>
+
+        <!-- FOTO: simpan kiara.jpg satu folder dengan index.html -->
+        <div class="profile-photo">
+          <img src="kiara.jpg" alt="Foto Kiara Ayuningtyas"
+            onerror="this.style.display='none'; document.getElementById('photoError').style.display='flex';">
+
+          <div id="photoError"
+            style="display:none;width:100%;height:100%;align-items:center;justify-content:center;text-align:center;padding:15px;color:#776F69;font-size:13px">
+            Foto tidak ditemukan.<br>
+            Pastikan kiara.jpg satu folder dengan index.html.
+          </div>
+        </div>
+
+        <div class="card-foot">
+          <div>
+            <span class="caption">INFORMATION SYSTEMS STUDENT</span>
+            <h3>Nice to meet you!</h3>
+          </div>
+          <span class="star">✳</span>
+        </div>
+      </div>
+
+      <div class="tag tag-top">
+        <span>✦</span> Creative &amp; Organized
+      </div>
+
+      <div class="tag tag-bottom">
+        <span>↗</span> Always Learning
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TENTANG SAYA -->
+<section class="section" id="tentang">
+  <div class="container about-grid">
+
+    <div>
+      <p class="label">Tentang Saya</p>
+      <div class="about-number">01.</div>
+    </div>
+
+    <div>
+      <h2 class="section-title">Mengenal saya lebih dekat.</h2>
+
+      <p class="about-text">
+        Halo! Aku Kiara Ayuningtyas, mahasiswa Program Studi Sistem Informasi.
+        Aku memiliki pengalaman dalam kegiatan organisasi, khususnya di bidang
+        kesekretariatan.
+      </p>
+
+      <p class="about-text">
+        Melalui pengalaman organisasi, aku terbiasa membantu pengelolaan
+        administrasi, pengarsipan dokumen, dan menjaga alur komunikasi internal.
+        Aku juga tertarik pada desain visual menggunakan Canva serta
+        penyuntingan video menggunakan CapCut.
+      </p>
+
+      <p class="about-text">
+        Aku senang mempelajari hal baru, bekerja sama dalam tim, dan
+        mengembangkan kemampuan agar dapat memberikan kontribusi yang baik.
+      </p>
+
+      <div class="identity-list">
+        <div class="identity-item">
+          <small>Nama Lengkap</small>
+          <strong>Kiara Ayuningtyas</strong>
+        </div>
+
+        <div class="identity-item">
+          <small>NIM</small>
+          <strong>26051214181</strong>
+        </div>
+
+        <div class="identity-item">
+          <small>Program Studi</small>
+          <strong>Sistem Informasi</strong>
+        </div>
+
+        <div class="identity-item">
+          <small>Kelas</small>
+          <strong>2026G</strong>
+        </div>
+
+        <div class="identity-item">
+          <small>Asal</small>
+          <strong>Indramayu, Jawa Barat</strong>
+        </div>
+
+        <div class="identity-item">
+          <small>Fokus</small>
+          <strong>Administrasi &amp; Kreativitas</strong>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- KEAHLIAN -->
+<section class="section skills-section" id="keahlian">
+  <div class="container">
+
+    <div class="skills-header">
+      <p class="label">Keahlian Saya</p>
+      <h2 class="section-title">Hal yang bisa aku lakukan.</h2>
+      <p class="description">
+        Beberapa kemampuan yang aku kembangkan melalui kegiatan organisasi
+        dan minat pribadi.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+
+      <article class="skill-card">
+        <div class="skill-icon">🎬</div>
+        <h3>Video Editing</h3>
+        <p>
+          Mengedit dan menyusun video menggunakan CapCut untuk menghasilkan
+          konten yang menarik dan komunikatif.
+        </p>
+        <span class="skill-tag">CapCut</span>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-icon">🎨</div>
+        <h3>Desain Visual</h3>
+        <p>
+          Membuat desain visual menggunakan Canva untuk kebutuhan publikasi,
+          presentasi, dan konten kreatif.
+        </p>
+        <span class="skill-tag">Canva</span>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-icon">🤝</div>
+        <h3>Kerja Sama Tim</h3>
+        <p>
+          Berkolaborasi dalam kegiatan organisasi, berkomunikasi dengan
+          anggota, dan mendukung program kerja.
+        </p>
+        <span class="skill-tag">Organisasi</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PENGALAMAN -->
+<section class="section" id="pengalaman">
+  <div class="container">
+
+    <p class="label">Perjalanan Organisasi</p>
+    <h2 class="section-title">Pengalaman yang membentukku.</h2>
+
+    <p class="description">
+      Pengalaman berorganisasi menjadi ruang untuk belajar tentang tanggung
+      jawab, administrasi, komunikasi, dan kerja sama.
+    </p>
+
+    <div class="experience-list">
+
+      <article class="experience-item">
+        <div class="period">2024 — 2025</div>
+        <div>
+          <h3>Majelis Permusyawaratan Santri</h3>
+          <div class="role">Staf Sekretaris</div>
+          <p>
+            Mendukung kegiatan kesekretariatan, membantu pengelolaan
+            administrasi, dan menjaga kerapian dokumen organisasi.
+          </p>
+        </div>
+        <div class="arrow">↗</div>
+      </article>
+
+      <article class="experience-item">
+        <div class="period">2024 — 2025</div>
+        <div>
+          <h3>Komunikasi Santri se-Wilayah III Cirebon</h3>
+          <div class="role">Anggota Hubungan Masyarakat</div>
+          <p>
+            Berpartisipasi dalam kegiatan hubungan masyarakat dan mendukung
+            komunikasi serta koordinasi dengan pihak terkait.
+          </p>
+        </div>
+        <div class="arrow">↗</div>
+      </article>
+
+      <article class="experience-item">
+        <div class="period">Februari 2025</div>
+        <div>
+          <h3>AL MULTAZAM EXPO VI</h3>
+          <div class="role">Anggota Divisi Kesekretariatan</div>
+          <p>
+            Berkontribusi dalam tugas kesekretariatan untuk mendukung
+            kebutuhan administrasi selama kegiatan berlangsung.
+          </p>
+        </div>
+        <div class="arrow">↗</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section class="section contact-section" id="kontak">
+  <div class="container">
+
+    <div class="contact-box">
+      <div>
+        <p class="label">Mari Terhubung</p>
+
+        <h2 class="contact-heading">
+          Punya kesempatan menarik?
+          <span>Mari berbincang.</span>
+        </h2>
+
+        <p class="contact-intro">
+          Aku terbuka untuk terhubung, berbagi pengalaman, belajar bersama,
+          dan menjajaki kesempatan baru. Jangan ragu untuk menghubungiku!
+        </p>
+      </div>
+
+      <div class="contact-list">
+
+        <a class="contact-item" href="mailto:kiarayutyas@gmail.com">
+          <span class="contact-icon">✉</span>
+          <span>
+            <small>Email Pribadi</small>
+            <strong>kiarayutyas@gmail.com</strong>
+          </span>
+        </a>
+
+        <a class="contact-item"
+          href="mailto:26051214181@mhs.unesa.ac.id">
+          <span class="contact-icon">🎓</span>
+          <span>
+            <small>Email Kampus</small>
+            <strong>26051214181@mhs.unesa.ac.id</strong>
+          </span>
+        </a>
+
+        <a class="contact-item"
+          href="https://www.linkedin.com/"
+          target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon">in</span>
+          <span>
+            <small>LinkedIn</small>
+            <strong>Kiara Ayuningtyas · LinkedIn</strong>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> <strong>Kiara Ayuningtyas.</strong></p>
+    <p>Dibuat dengan semangat untuk terus berkembang ✳</p>
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+  const isOpen = navLinks.classList.toggle("open");
+
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+navLinks.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
+  });
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
